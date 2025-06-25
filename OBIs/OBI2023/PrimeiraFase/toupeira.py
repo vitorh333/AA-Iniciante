@@ -1,17 +1,17 @@
 from collections import defaultdict
 
 v, l = map(int, input().split())
-
+    
 mapa = defaultdict(set)
-
+    
 for i in range(l):
     v1, v2 = map(int, input().split())
     mapa[v1].add(v2)
     mapa[v2].add(v1)
-
+    
 q = int(input())
 passeio = []
-
+    
 for i in range(q):
     p = list(map(int, input().split()))
     passeio.append(p)
