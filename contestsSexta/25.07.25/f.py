@@ -1,11 +1,14 @@
+from collections import defaultdict
+
 s = input()
+mapa = defaultdict(int)
 cont = 0
-conj = set()
 
 for i in range(len(s)):
-    conj.add(s[i])
+    mapa[s[i]] += 1
+
 
 for i in range(len(s)):
-    if s[i] in conj:
-        cont += 1
+    cont += mapa[s[i]]
+
 print(cont)
