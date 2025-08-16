@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/mnt/c/Users/lenovo/AAIniciante/vimconfig'
+let g:netrw_dirhist_8='/home/vitor/.vim/plugged/auto-pairs/plugin'
+let g:netrw_dirhist_7='/home/vitor/.vim/plugged/auto-pairs'
+let g:netrw_dirhist_6='/home/vitor/.vim/plugged/auto-pairs/.git'
+let g:netrw_dirhist_5='/home/vitor/.vim/plugged/auto-pairs'
+let g:netrw_dirhist_4='/home/vitor/.vim/autoload'
+let g:netrw_dirhist_3='/home/vitor/.vim'
+let g:netrw_dirhist_2='/home/vitor/.vim/colors'
+let g:netrw_dirhist_1='/home/vitor/.vim'
+let g:netrw_dirhist_0='/home/vitor/.vim/colors'

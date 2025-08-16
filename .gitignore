@@ -1,0 +1,7 @@
+.vim/plugged/
+.vim/pack/
+*.swp
+*.swo
+*.bak
+*.undo
+.vim/.netrwhist
