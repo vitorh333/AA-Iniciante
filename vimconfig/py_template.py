@@ -5,7 +5,6 @@ from collections import defaultdict
 from collections import deque
 import sys
 
-#sys.setrecursionlimit(10**6)
 input = sys.stdin.readline
 INF = 10**18 + 10
 
@@ -65,36 +64,4 @@ def dijkstra(grafo, verticie):
     return dist, pai
 
 
-def dfs(no, pai, cont):
-    if gatos[no] == 1:
-        cont += 1
-    else:
-        cont = 0
 
-    if cont > g:
-        return 0
-
-    folha = True
-    total = 0
-    for vizinho in grafo[no]:
-        if vizinho != pai:
-            folha = False
-            total += dfs(vizinho, no, cont)
-
-    if folha:
-        return 1
-
-    return total
-
-n, g = map(int, input().split())
-gatos = list(map(int, input().split()))
-
-grafo = defaultdict(list)
-
-for i in range(n - 1):
-    v1, v2 = map(int, input().split())
-    grafo[v1 -1].append(v2 - 1)
-    grafo[v2 - 1].append(v1 - 1)
-
-
-print(dfs(0, -1, 0))
