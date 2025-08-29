@@ -1,0 +1,33 @@
+def dijstkra(grafo, v):
+    dist = [INF] * n
+    dist[v] = 0
+
+    fila = [(0, v)]
+
+    while fila:
+        d, v = heapq.heapop(fila)
+
+        if dist[v] > d:
+            continue
+
+        for u, d1 in grafo[v]:
+            if dist[u] > dist[v] + d1:
+                dist[u] = dist[v] + d1
+                heapq.heappush(fila, (u, d1))
+    return dist
+
+from collections import defaultdict
+import heapq
+
+n = int(input())
+
+grafo = defaultdict(list)
+
+for i in range(n-1):
+    v1, v2, d = map(int, input().split())
+    grafo[v1 - 1].append((v2 - 1, d))
+    grafo[v2 - 1].append((v1 - 1, d))
+
+dist = dijstkra(grafo, 0)
+print(dist)
+
